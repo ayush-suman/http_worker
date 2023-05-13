@@ -26,13 +26,14 @@ abstract class HttpWorker {
 
   /// Function to process the request. This function should return a [Completer]
   /// with [Response] as the future.
-  (Completer<Response<T>>, {Object? meta}) processRequest<T>({
+  ({Completer<Response<T>> completer, Object? meta}) processRequest<T>({
       required Object id,
       required RequestMethod method,
       required Uri url,
       Map<String, String>? header,
       Object? body,
-      Parser<T>? parser
+      Parser<T>? parser,
+      Object? meta
   });
 
   /// Function to cancel the request with the given [id].
@@ -46,4 +47,3 @@ abstract class HttpWorker {
   /// if you are using them in your implementation.
   destroy();
 }
-
