@@ -1,3 +1,8 @@
+## 1.2.0
+
+- processRequest now returns a Record of Completer<Response> and Object? meta.
+- processRequest now takes named parameters.
+
 ## 1.1.0
 
 - Upgrade to Dart 3
