@@ -33,7 +33,7 @@ abstract class HttpWorker<K> {
       Map<String, String>? header,
       Object? body,
       Parser<T>? parser,
-      Map<String, Object?> meta = const {}
+      Map<String, Object?>? meta
   });
 
   /// Function to cancel the request with the given [id].
