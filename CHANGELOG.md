@@ -1,3 +1,7 @@
+## 1.3.0
+
+- HTTP Worker now supports typed request Ids
+
 ## 1.2.0
 
 - processRequest now returns a Record of Completer<Response> and Object? meta.

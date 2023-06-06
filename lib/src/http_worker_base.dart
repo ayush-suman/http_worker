@@ -12,7 +12,7 @@ import 'package:parser_interface/parser_interface.dart';
 /// of [Isolates](https://www.youtube.com/watch?v=vl_AaCgudcY) with an
 /// implementation of load balancer to balance the request across
 /// [Isolate](https://www.youtube.com/watch?v=vl_AaCgudcY)s.
-abstract class HttpWorker {
+abstract class HttpWorker<K> {
   const HttpWorker();
 
   /// This method is called before any requests are processed. This can be used
@@ -26,18 +26,18 @@ abstract class HttpWorker {
 
   /// Function to process the request. This function should return a [Completer]
   /// with [Response] as the future.
-  ({Completer<Response<T>> completer, Object? meta}) processRequest<T>({
-      required Object id,
+  (Completer<Response<T>>, {Object? meta}) processRequest<T>({
+      required K id,
       required RequestMethod method,
       required Uri url,
       Map<String, String>? header,
       Object? body,
       Parser<T>? parser,
-      Object? meta
+      Map<String, Object?> meta
   });
 
   /// Function to cancel the request with the given [id].
-  Future killRequest(Object id);
+  Future killRequest(K id);
 
   /// Function to destroy the worker. Currently, this is not used in this library.
   /// But, you can call this function from your application if you have access
