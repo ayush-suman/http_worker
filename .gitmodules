@@ -1,3 +1,6 @@
 [submodule "packages/multithreaded_http_worker"]
 	path = packages/multithreaded_http_worker
 	url = https://github.com/ayush-suman/multithreaded_http_worker.git
+[submodule "packages/cronet_http_worker"]
+	path = packages/cronet_http_worker
+	url = https://github.com/ayush-suman/cronet_http_worker
