@@ -4,3 +4,6 @@
 [submodule "packages/cronet_http_worker"]
 	path = packages/cronet_http_worker
 	url = https://github.com/ayush-suman/cronet_http_worker.git
+[submodule "packages/http2_worker"]
+	path = packages/http2_worker
+	url = https://github.com/ayush-suman/http2_worker.git
