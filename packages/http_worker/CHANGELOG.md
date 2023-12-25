@@ -1,3 +1,7 @@
+## 1.3.4
+
+- Add optional host and port to HTTP worker initialisation.
+
 ## 1.3.0
 
 - HTTP Worker now supports typed request Ids

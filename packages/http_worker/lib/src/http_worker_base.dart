@@ -22,7 +22,7 @@ abstract class HttpWorker<K> {
   /// For example, if you are using
   /// [Isolate](https://www.youtube.com/watch?v=vl_AaCgudcY)s to call requests,
   /// spawn the isolates in this function.
-  Future init();
+  Future init({String? host, int? port});
 
   /// Function to process the request. This function should return a [Completer]
   /// with [Response] as the future.
