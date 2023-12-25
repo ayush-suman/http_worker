@@ -1,4 +1,4 @@
-## 1.3.4
+## 1.3.5
 
 - Add optional host and port to HTTP worker initialisation.
 
